@@ -16,7 +16,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      <marquee scrollamount="10">Recent colloection books are available!</marquee>
+      <marquee scrollamount="10">Recent collection books are available!</marquee>
     </>
   )
 }
