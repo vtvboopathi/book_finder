@@ -31,14 +31,9 @@ const Preview = ({ view, item, onClose }) => {
           <div className="info">
             <h1>{item.volumeInfo.title}</h1>
             <h3>{authors}</h3>
-            <h4>
-              {publisher}
-              <span>{publishedDate}</span>
-            </h4>
+            <h4>{publisher}<span>{publishedDate}</span></h4>
             <a href={previewLink} target='blank'>
-              <button>
-                <CiCircleMore />
-              </button>
+              <button className='pdf'>PDF</button>
             </a>
           </div>
         </div>

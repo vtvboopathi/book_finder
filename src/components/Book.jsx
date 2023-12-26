@@ -19,7 +19,7 @@ const Book = ({books}) => {
             return(
               <div className='book_main'>
                 <div className='book'>
-                  <div className='up' onClick={()=>{setView(true), setBookItem(item)}}>
+                  <div className='up' onClick={()=>{setView(true); setBookItem(item)}}>
                     <img src={thumb}/>
                   </div>
                   <div className='down'>

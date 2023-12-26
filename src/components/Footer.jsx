@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
 
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+    <footer className="footer">
+      <div className="container">
+        <p>&copy; {new Date().getFullYear()} Google Book Finder. All Rights Reserved.</p>
+        <p>Designed and developed by vtvboopathi@gmail.com</p>
+      </div>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;

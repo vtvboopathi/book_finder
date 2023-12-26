@@ -33,7 +33,7 @@ const Home = () => {
               onChange={e=> setSearch(e.target.value)}
               onKeyPress={searchIt}
               />
-            <button><FaSearch onClick={searchIt} /></button>
+            <button  onClick={searchIt}  className='btn2'><FaSearch className='btn'/></button>
           </div>
         </div>
         <div className='cont'>
