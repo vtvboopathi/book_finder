@@ -7,32 +7,33 @@ const Book = ({books}) => {
   console.log(books)
   return (
     <>
-      <div className='cont'>
+      {/* <div className="container"> */}
+        <div className='cont'>
+          {books.map((item)=>{
 
-        {books.map((item)=>{
+            let thumb = item.volumeInfo.imageLinks && item.volumeInfo.imageLinks.smallThumbnail
+            let name = item.volumeInfo.title
+            let price = item.saleInfo.listPrice && item.saleInfo.listPrice.amount
 
-          let thumb = item.volumeInfo.imageLinks && item.volumeInfo.imageLinks.smallThumbnail
-          let name = item.volumeInfo.title
-          let price = item.saleInfo.listPrice && item.saleInfo.listPrice.amount
-
-          if(thumb != undefined && price != undefined){
-            return(
-              <div className='book_main'>
-                <div className='book'>
-                  <div className='up' onClick={()=>{setView(true); setBookItem(item)}}>
-                    <img src={thumb}/>
-                  </div>
-                  <div className='down'>
-                    <h3 className='book_title'>{name}</h3>
-                    <p>₹{price}</p>
+            if(thumb != undefined && price != undefined){
+              return(
+                <div className='book_main'>
+                  <div className='book'>
+                    <div className='up' onClick={()=>{setView(true); setBookItem(item)}}>
+                      <img src={thumb}/>
+                    </div>
+                    <div className='down'>
+                      <h3 className='book_title'>{name}</h3>
+                      <p>₹{price}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            )
-          }
-        })}
-      </div>
+              )
+            }
+          })}
+        </div>
       <Preview view={view} item={bookItem} onClose={()=> setBookItem(false)}/>
+      {/* </div> */}
     </>
   )
 }
