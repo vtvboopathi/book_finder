@@ -23,19 +23,17 @@ const Home = () => {
             <h1>A Good Book Is Equal To <br/>Thousand Teachers...,</h1>
             <h2>Welcome to the library,<br/> Your search ends here....,</h2>
           </div>
-          <div className='sticky'>
-            <div className='search'>
-              <input 
-                type="text" 
-                name="" id="" 
-                placeholder='Here you go...,' 
-                className='input'
-                value={search}
-                onChange={e=> setSearch(e.target.value)}
-                onKeyPress={searchIt}
-                />
-              <button  onClick={searchIt}  className='btn2'><FaSearch className='btn'/></button>
-            </div>
+          <div className='search'>
+            <input 
+              type="text" 
+              name="" id="" 
+              placeholder='Here you go...,' 
+              className='input'
+              value={search}
+              onChange={e=> setSearch(e.target.value)}
+              onKeyPress={searchIt}
+              />
+            <button  onClick={searchIt}  className='btn2'><FaSearch className='btn'/></button>
           </div>
         </div>
         <div className='cont'>

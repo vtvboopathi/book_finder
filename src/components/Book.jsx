@@ -7,7 +7,7 @@ const Book = ({books}) => {
   console.log(books)
   return (
     <>
-      {/* <div className="container"> */}
+      <div className="container">
         <div className='cont'>
           {books.map((item)=>{
 
@@ -33,7 +33,7 @@ const Book = ({books}) => {
           })}
         </div>
       <Preview view={view} item={bookItem} onClose={()=> setBookItem(false)}/>
-      {/* </div> */}
+      </div>
     </>
   )
 }
